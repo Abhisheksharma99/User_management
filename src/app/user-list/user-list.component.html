@@ -1,0 +1,15 @@
+<div class="container">
+    <h1>User List</h1>
+    <ul class="user-list">
+      @for (user of users; track user) {
+        <li class="user-item" (click)="openDialog(user)">
+          <div class="user-info">
+            <span class="user-name">{{ user.firstName }} {{ user.lastName }}</span>
+            <span class="user-email">{{ user.email }}</span>
+          </div>
+          <span class="view-details">View Details</span>
+        </li>
+      }
+    </ul>
+  </div>
+  
